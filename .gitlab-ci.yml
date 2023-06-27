@@ -32,17 +32,13 @@ java:
   stage: test
   script:
     - mvn verify
-    - ls -al
-    - cd target
-    - ls -al 
+    - mvn surefire-report:report-only
   artifacts:
     when: always
     reports:
       junit:
-        - target/surefire-reports/TEST-*.xml
-    paths:
-      - target/surefire-reports/TEST-*.xml
-        
+        - target/site/surefire-report.html
+
 deploy_production:
   stage: deploy
   script:
