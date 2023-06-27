@@ -25,7 +25,18 @@ include:
   - template: Jobs/SAST-IaC.gitlab-ci.yml
   - template: Jobs/Secret-Detection.gitlab-ci.yml
   - template: Security/License-Scanning.gitlab-ci.yml
-
+  
+java:
+  stage: test
+  script:
+    - mvn verify
+  artifacts:
+    when: always
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+        - target/failsafe-reports/TEST-*.xml
+        
 deploy_production:
   stage: deploy
   script:
