@@ -16,6 +16,8 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
+image: maven:latest
+
 include:
   - template: Jobs/Build.gitlab-ci.yml
   - template: Security/Container-Scanning.gitlab-ci.yml
