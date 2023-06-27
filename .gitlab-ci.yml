@@ -34,6 +34,8 @@ java:
     - pwd
     - mvn verify
     - ls -al
+    - cd target
+    - ls -al 
   artifacts:
     when: always
     reports:
