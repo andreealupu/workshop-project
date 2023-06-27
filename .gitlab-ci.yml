@@ -33,11 +33,14 @@ java:
   script:
     - pwd
     - mvn verify
+    - pwd
   artifacts:
     when: always
     reports:
       junit:
         - target/surefire-reports/TEST-*.xml
+    paths:
+      - target/surefire-reports/TEST-*.xml
         
 deploy_production:
   stage: deploy
