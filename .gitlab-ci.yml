@@ -40,9 +40,9 @@ java:
     when: always
     reports:
       junit:
-        - target/surefire/surefire-reports/TEST-*.xml
+        - target/surefire-reports/TEST-*.xml
     paths:
-      - target/surefire/surefire-reports/TEST-*.xml
+      - target/surefire-reports/TEST-*.xml
         
 deploy_production:
   stage: deploy
