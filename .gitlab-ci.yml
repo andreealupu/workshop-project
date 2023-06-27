@@ -31,7 +31,7 @@ include:
 java:
   stage: test
   script:
-    - mvn clean
+    - pwd
     - mvn verify
   artifacts:
     when: always
