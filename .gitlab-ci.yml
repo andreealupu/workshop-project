@@ -34,15 +34,15 @@ java:
     - pwd
     - mvn verify
     - ls -al
-    - cd target
+    - cd target/surefire
     - ls -al 
   artifacts:
     when: always
     reports:
       junit:
-        - target/surefire-reports/TEST-*.xml
+        - target/surefire/surefire-reports/TEST-*.xml
     paths:
-      - target/surefire-reports/TEST-*.xml
+      - target/surefire/surefire-reports/TEST-*.xml
         
 deploy_production:
   stage: deploy
