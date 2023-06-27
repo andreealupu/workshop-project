@@ -31,10 +31,9 @@ include:
 java:
   stage: test
   script:
-    - pwd
     - mvn verify
     - ls -al
-    - cd target/surefire
+    - cd target
     - ls -al 
   artifacts:
     when: always
