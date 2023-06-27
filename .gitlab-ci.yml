@@ -33,7 +33,7 @@ java:
   script:
     - pwd
     - mvn verify
-    - pwd
+    - ls -al
   artifacts:
     when: always
     reports:
